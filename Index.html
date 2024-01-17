@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personlig portfolie hjemmeside</title>
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/a43489f4e2.js" crossorigin="anonymous"></script>
+
+    <!-- Internal Styles -->
+    <style>
+        /* Styling for header-text and h1 */
+        .header-text,
+        h1 {
+            color: #ea8ba1;
+        }
+
+        /* Styling for tab contents and active tab */
+        .tab-contents {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
+    </style>
+
+    <!-- Tilføjet styling for at placere knapperne i bunden -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Minimum 100% af viewportens højde */
+        }
+
+        #Kontakt {
+            flex-grow: 1; /* Fylder resten af det tilgængelige plads i flex-containeren */
+        }
+
+        .active-link {
+            color: #ea8ba1;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-contents");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-links");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header sektion -->
+    <div id="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </div>
+                <!-- Mobile Menu -->
+                <div id="sidemenu" class="punkter">
+                    <ul>
+                        <li><a href="#Om">Om mig</a></li>
+                        <li><a href="#portfolie">Teknik</a></li>
+                        <li><a href="#portfolie-side">Projekter</a></li>
+                        <li><a href="#Kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Header tekst -->
+            <div class="header-text">
+                <p>Multimediedesigner</p>
+                <h1>Jeg <span class="highlight">skaber</span> kreative og<br>innovative <span class="highlight">løsninger</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-- Om sektion -->
+    <div id="Om" class="container">
+        <div class="row">
+            <div class="Om-col-1">
+                <img src="Portræt-1.JPG" alt="Portræt">
+            </div>
+
+            <!-- Tekst kolonne -->
+            <div class="Om-col-2">
+                <h1 class="sub-title">Om mig</h1>
+                <p>Jeg er Emma Ross, 23 år og studerende inden for multimediedesign på UCL. Min kreativitet blomstrer i mine projekter, hvor jeg udforsker forskellige medier. Udadvendt og åben for samarbejde, bidrager jeg positivt til gruppearbejde og netværksskabelse.
+
+                    Min evne til at kombinere analytiske færdigheder med kunstnerisk flair giver mig en frisk tilgang til problemløsning. Jeg stræber konstant efter at forbedre mig og udforske nye aspekter af multimediedesign, både i og uden for studiet.</p>
+                    
+                <!-- Tab-titler og indhold -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab('Erfaring')">Erfaring</p>
+                    <p class="tab-links" onclick="openTab('Personlighed')">Personlighed</p>
+                </div>
+                <!-- Faneindhold -->
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Adobe programmer</span><br>Illustrator, XD, Indesign, Aftereffects, Premier Pro & Photoshop</li>
+                        <li><span>Webudvikling</span><br>HTML & CSS</li>
+                        <li><span>Foto/video</span><br>Redigering ved brug af Photoshop & Premier Pro</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Erfaring">
+                    <ul>
+                        <li><span>HTML & CSS</span><br>Jeg har kodet en hjemmeside til mit eksamenprojekt</li>
+                        <li><span>Interaktiv oplevelse</span><br>Samarbejde med Langelandsfortet</li>
+                        <li><span>Brugertest</span><br>Jeg har gennem min uddannelse lært at brugerteste og lave et færdigt produkt som fungerer</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Personlighed">
+                    <ul>
+                        <li><span>Personlighedsprofil</span><br>ESTJ <br> <br> Denne type er ofte rationelle, loyale og beslutsomme personer, der holder af strukturering, planlægning og effektivitet. Deres talent ligger i at strukturere og få orden i tingene, så de kan gøres færdige. De er gode til at følge op på tingene og udtrykke anerkendelse over for dem, der har udført de aftalte arbejdsopgaver. De er bedst til at arbejde inden for eksisterende strukturer efter vedtagne procedurer.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Teknik sektion -->
+    <div id="portfolie">
+        <div class="container">
+            <h1 class="sub-title">Teknik</h1>
+            <div class="portfolie-list">
+                <!-- Portfolie elementer -->
+                <div class="portfolie-item">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Webdesign</h2>
+                    <p> Jeg specialiserer mig i at skabe imponerende webdesigns. Med fokus på æstetik, responsivitet og brugervenlighed, hjælper jeg med at bringe din digitale vision til live. Lad os sammen skabe et online udtryk, der skiller sig ud og fænger dine besøgende.</p>
+                </div>
+
+                <div class="portfolie-item">
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Foto & video</h2>
+                    <p>Jeg skaber fængslende foto- og videomateriale. Gennem en kombination af teknisk kunnen og kreativt flair formidler jeg historier og øjeblikke på en unik og mindeværdig måde. Lad os sammen bringe dine visioner til live gennem en visuel rejse.</p>
+                </div>
+                <div class="portfolie-item">
+                    <i class="fa-solid fa-laptop"></i>
+                    <h2>Animation</h2>
+                    <p>jeg specialiserer mig i at skabe levende animationer, der tilføjer et magisk strejf til ethvert projekt. Fra karakteranimation til motion graphics arbejder jeg på at bringe ideer til live og skabe en engagerende og mindeværdig oplevelse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Projekter sektion -->
+    <!-- Projekter sektion -->
+    <div id="portfolie-side">
+        <div class="container">
+            <h1 class="sub-title">Mit arbejde</h1>
+            <div class="work-list">
+                <div class="arbejde">
+                    <!-- Project 1 -->
+                    <div class="project">
+                        <img src="macmockup.jpg" alt="Macbook mockup">
+                        <div class="layer">
+                            <h3>Webdesign</h3>
+                            <p>Jeg har udviklet og implementeret en hjemmeside for en frisørsalon beliggende i Horsens, hvor der systematisk er blevet integreret en farvepalet bestående af beroligende grønne nuancer.</p>
+                            <a href="https://www.rrstyling.com" class="visit-link">Se</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="arbejde">
+                    <img src="animationmockup.jpg" alt="Animation mockup">
+                    <div class="layer">
+                        <h3>Animation</h3>
+                        <p>Inden for rammerne af undervisningen har jeg gennem anvendelse af animation formået at <br>bringe et værk af kunstneren Kvium til live.</p>
+                        <a href="animationworkshop.mp4" class="visit-link">Se</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="arbejde">
+                    <img src="cry.png" alt="Procreate-plakat">
+                    <div class="layer">
+                        <h3>Plakatdesign</h3>
+                        <p>Jeg har i min fritid designet produkter med mine egne motiver ved hjælp af procreate.</p>
+                        <a href="Produkter.pdf" target="_blank" class="visit-link">Se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kontakt sektion -->
+    <div id="Kontakt">
+        <div class="container">
+            <div class="row">
+                <div class="Kontakt-left">
+                    <h1 class="sub-title">Kontakt mig</h1>
+                    <p class="contact-info"><i class="fa-solid fa-envelope"></i> Emmasdrev@gmail.com</p>
+                    <p class="contact-info"><i class="fa-solid fa-phone"></i> +45 22165440</p>
+                    <a href="CV.pdf" target="_blank" class="btn btn2">Download CV</a>
+                    <!-- Sociale ikoner -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100060984168117"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/emma-pedersen-168269263/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/aemmaross/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright sektion -->
+    <div class="copyright">
+        <p>Copyright © Emma Ross. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+    </div>
+</body>
+
+</html>
